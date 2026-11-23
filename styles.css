@@ -75,12 +75,12 @@ sup{font-size:.6em}
 
 /* ---------- hero ---------- */
 .hero{position:relative;height:calc(100 * var(--vh,1vh));min-height:620px;max-height:1100px;display:flex;align-items:flex-end;overflow:hidden;isolation:isolate}
-.hero__media,.hero__media picture,.hero__poster,.hero__video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero__media,.hero__media picture,.hero__poster{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .hero__media{z-index:-2;background:#2a1d12}
-.hero__poster{animation:heroZoom 2.4s var(--ease) both}
-.hero__video{opacity:0;transition:opacity .25s}
-.hero__video.is-on{opacity:1}
-@keyframes heroZoom{from{transform:scale(1.06)}to{transform:scale(1)}}
+/* zoom très lent pour que la photo reste vivante */
+.hero__poster{object-position:85% 50%;transform-origin:65% 55%;animation:heroIn 2.4s var(--ease) both,heroDrift 24s 2.4s ease-in-out infinite alternate}
+@keyframes heroIn{from{transform:scale(1.06)}to{transform:scale(1)}}
+@keyframes heroDrift{from{transform:scale(1)}to{transform:scale(1.07)}}
 .hero__veil{position:absolute;inset:0;z-index:-1;background:
   linear-gradient(90deg,rgba(10,9,8,.86) 0%,rgba(10,9,8,.62) 34%,rgba(10,9,8,.08) 66%,rgba(10,9,8,0) 100%),
   linear-gradient(0deg,rgba(10,9,8,.75) 0%,rgba(10,9,8,0) 40%),
@@ -374,6 +374,7 @@ section{position:relative}
   .hero__ctas{flex-direction:column}
   .hero__ctas .btn{width:100%}
   .hero__coord{display:none}
+  .hero__poster{object-position:35% 50%}
   .pill{font-size:.84rem;padding:7px 12px}
   .trust__list{padding-top:28px}
   .trust__list strong{font-size:1.6rem}

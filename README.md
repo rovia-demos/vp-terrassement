@@ -17,7 +17,7 @@ Pages non indexées (`noindex` + `robots.txt`).
 
 ## EXEMPLE – à remplacer
 
-- Vidéo et image du hero : `video/hero.mp4`, `video/hero-m.mp4`, `img/hero-poster*.webp`, `og-image.jpg`
+- Photo du hero : `img/hero-*.webp`, `og-image.jpg`
 - Les 4 paires avant / après : `img/av1-4`, `img/ap1-4`
 - Photos d'illustration des services et de la galerie : `img/tranchee`, `img/fosse`, `img/compactage`, `img/ap1-4`
 - E-mail : `contact@vp-terrassement.fr`

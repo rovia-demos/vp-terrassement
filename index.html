@@ -63,14 +63,13 @@
 <main id="contenu">
 
 <!-- ============ HERO ============ -->
-<!-- EXEMPLE – à remplacer : vidéo hero d'illustration (pelle sur chantier marseillais). À remplacer par une vidéo réelle de V&P si disponible. -->
+<!-- EXEMPLE – à remplacer : photo hero d'illustration (mini-pelle sur chantier marseillais). À remplacer par une vraie photo de V&P si disponible. -->
 <section class="hero" aria-labelledby="h1">
   <div class="hero__media">
     <picture>
-      <source media="(max-aspect-ratio: 4/5)" srcset="img/hero-poster-m.webp">
-      <img class="hero__poster" src="img/hero-poster.webp" alt="Pelle mécanique orange en train de creuser sur une colline au-dessus de Marseille, poussière dans la lumière du soir" fetchpriority="high">
+      <source media="(max-aspect-ratio: 4/5)" srcset="img/hero-m-720.webp 720w, img/hero-m-1080.webp 1080w" sizes="100vw">
+      <img class="hero__poster" src="img/hero-2560.webp" srcset="img/hero-1280.webp 1280w, img/hero-2560.webp 2560w" sizes="100vw" width="2560" height="1448" alt="Mini-pelle orange creusant une tranchée sur un chantier à Marseille, avec la ville, le port et Notre-Dame de la Garde en fond" fetchpriority="high">
     </picture>
-    <video class="hero__video" id="hero-video" muted loop playsinline preload="none" aria-hidden="true" data-desktop="video/hero.mp4" data-mobile="video/hero-m.mp4"></video>
   </div>
   <div class="hero__veil"></div>
   <div class="hero__in">

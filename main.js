@@ -32,16 +32,6 @@
   $$('a', nav).forEach(a => a.addEventListener('click', () => setMenu(false)));
   addEventListener('keydown', e => { if (e.key === 'Escape') setMenu(false); });
 
-  /* ---------- vidéo hero (choisie une fois selon le format d'écran) ---------- */
-  const video = $('#hero-video');
-  if (!reduce && video) {
-    const portrait = innerWidth / innerHeight < 0.8;
-    video.src = portrait ? video.dataset.mobile : video.dataset.desktop;
-    video.poster = portrait ? 'img/hero-poster-m.webp' : 'img/hero-poster.webp';
-    video.addEventListener('playing', () => video.classList.add('is-on'), { once: true });
-    video.play().catch(() => {});
-  }
-
   /* ---------- apparitions au défilement ---------- */
   $$('.sec-head, .trust__list li, .why__list li, .rv li, .stats, .zone__card, .quote__side, .form, .ba__view, .more')
     .forEach(el => el.classList.add('rv-in'));
